@@ -1,7 +1,6 @@
 "use client";
 
-import { AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import Header from "../components/partials/header";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedinIn, FaGithub, FaArrowDown } from "react-icons/fa";
@@ -10,28 +9,17 @@ export default function About() {
   const socials = [
     {
       icon: FaInstagram,
-      url: "https://www.instagram.com/_https.firdaus/",
+      url: "https://www.instagram.com/orzlfaa_/",
     },
     {
       icon: FaLinkedinIn,
-      url: "https://www.linkedin.com/in/putrafir/",
+      url: "https://www.linkedin.com/in/arifahnbm/",
     },
     {
       icon: FaGithub,
-      url: "https://github.com/putrafir",
+      url: "https://github.com/arifahnbm",
     },
   ];
-
-  const titles = ["Software Engineer", "UI/UX Designer"];
-const [activeTitle, setActiveTitle] = useState(0);
-
-useEffect(() => {
-  const interval = setInterval(() => {
-    setActiveTitle((prev) => (prev + 1) % titles.length);
-  }, 3000); // ganti teks tiap 3 detik
-
-  return () => clearInterval(interval);
-}, []);
 
 
   return (
@@ -39,10 +27,14 @@ useEffect(() => {
       id="about"
       className="relative min-h-screen px-6 sm:px-12 lg:px-24 pt-20 "
     >
+
+      <div className="text-center mb-20 text-skyblue">
+                <Header title="About Me" />
+              </div>
       
       {/* ================= KONTEN BAWAH ================= */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 rounded-3xl
-    border border-maroon/40 p-8 backdrop-blur-sm items-center">
+    border border-skyblue/40 p-8 backdrop-blur-sm items-center">
         {/* ===== LEFT TEXT ===== */}
         <motion.div
           className="max-w-xl"
@@ -57,21 +49,7 @@ useEffect(() => {
             },
           }}
         >
-          <div className="h-[48px] mb-6 overflow-hidden">
-  <AnimatePresence mode="wait">
-    <motion.h2
-      key={titles[activeTitle]}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="text-4xl font-extrabold font-heading bg-gradient-to-r from-maroon to-maroon-teks bg-clip-text text-transparent"
-    >
-      {titles[activeTitle]}
-    </motion.h2>
-  </AnimatePresence>
-
-</div>
+       
 
 {/* ===== FOTO (MOBILE) ===== */}
 <motion.div
@@ -85,8 +63,8 @@ useEffect(() => {
       w-40 h-40
       rounded-full
       overflow-hidden
-      border border-maroon
-      shadow-[0_0_20px_rgba(193,18,31,0.35)]
+      border border-skyblue
+      shadow-[0_0_20px_rgba(48,140,199,0.35)]
     "
   >
     <Image
@@ -116,11 +94,11 @@ useEffect(() => {
               href="https://drive.google.com/"
               target="_blank"
               className="
-                rounded-full border-2 border-maroon
+                rounded-full border-2 border-skyblue
                 px-7 py-3
-                text-maroon
+                text-skyblue
                 transition-all duration-300
-                hover:bg-maroon hover:text-white
+                hover:bg-skyblue hover:text-white
               "
             >
               View CV
@@ -135,11 +113,11 @@ useEffect(() => {
                   target="_blank"
                   className="
                     w-10 h-10 rounded-full
-                    border border-maroon
+                    border border-skyblue
                     flex items-center justify-center
-                    text-maroon
+                    text-skyblue
                     transition-all duration-300
-                    hover:bg-maroon hover:text-white
+                    hover:bg-skyblue hover:text-white
                   "
                 >
                   <social.icon size={16} />
@@ -160,9 +138,9 @@ useEffect(() => {
     className="
       rounded-full
       overflow-hidden
-      border border-maroon
+      border border-skyblue
       transition-all duration-500
-      hover:shadow-[0_0_25px_rgba(193,18,31,0.35)]
+      hover:shadow-[0_0_25px_rgba(48,140,199,0.35)]
       hover:scale-105
     "
   >

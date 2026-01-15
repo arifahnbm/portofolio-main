@@ -43,7 +43,7 @@ export default function Projects() {
         
 
       {/* Title */}
-      <div className="text-maroon text-center mb-16">
+      <div className="text-skyblue text-center mb-16">
         <Header title="My Projects" />
 
         <LayoutGroup>
@@ -52,7 +52,7 @@ export default function Projects() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 border shadow-[0_0_25px_rgba(193,18,31,0.35)] border-maroon rounded-full  p-2 backdrop-blur"
+            className="inline-flex items-center gap-2 border shadow-[0_0_25px_rgba(48,140,199,0.35)] border-skyblue rounded-full  p-2 backdrop-blur"
           >
             {["All", "Website", "Mobile"].map((item) => {
               const isActive = activeFilter === item;
@@ -62,14 +62,14 @@ export default function Projects() {
                   key={item}
                   onClick={() => setActiveFilter(item)}
                   className={`relative px-6 py-2 rounded-full text-sm font-medium transition
-    ${isActive ? "text-white" : "text-maroon hover:text-white hover:bg-maroon"}
+    ${isActive ? "text-white" : "text-skyblue hover:text-white hover:bg-skyblue"}
   `}
                 >
                   {/* Active background (animated) */}
                   {isActive && (
                     <motion.span
                       layoutId="activeFilter"
-                      className="absolute inset-0 rounded-full bg-maroon text-white"
+                      className="absolute inset-0 rounded-full bg-skyblue text-white"
                       transition={{
                         type: "spring",
                         stiffness: 500,
@@ -100,11 +100,11 @@ export default function Projects() {
             key={i}
             className="
       group rounded-3xl
-      bg-foreground border border-maroon/30
+      bg-foreground border border-skyblue/30
       overflow-hidden
       transition-all duration-500
-      hover:border-maroon
-      hover:shadow-[0_0_25px_rgba(193,18,31,0.35)]
+      hover:border-skyblue
+      hover:shadow-[0_0_25px_rgba(48,140,199,0.35)]
     "
           >
             {/* IMAGE */}
@@ -123,12 +123,12 @@ export default function Projects() {
             {/* CONTENT */}
             <div className="p-8">
               {/* Title */}
-              <h3 className=" text-xl md:text-2xl text-maroon font-bold mb-3">
+              <h3 className=" text-xl md:text-2xl text-skyblue font-bold mb-3">
                 {project.title}
               </h3>
 
               {/* Description */}
-              <p className=" text-xs md:text-sm text-maroon/70 leading-relaxed mb-6 line-clamp-2">
+              <p className=" text-xs md:text-sm text-skyblue/70 leading-relaxed mb-6 line-clamp-2">
                 {project.description}
               </p>
 
@@ -141,7 +141,7 @@ export default function Projects() {
               flex items-center gap-2
               px-4 py-1.5
               rounded-full
-              bg-maroon text-white
+              bg-skyblue text-white
               text-xs font-semibold
               whitespace-nowrap
             "
@@ -156,11 +156,11 @@ export default function Projects() {
                 href={project.link}
                 className="
           inline-flex items-center gap-2
-          rounded-full border border-maroon/30
+          rounded-full border border-skyblue/30
           px-6 py-2 text-sm font-medium
-          text-maroon
+          text-skyblue
           transition-all duration-300
-          hover:bg-maroon hover:text-white
+          hover:bg-skyblue hover:text-white
         "
               >
                 View Work

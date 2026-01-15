@@ -1,8 +1,13 @@
-import { Geist, Geist_Mono, Russo_One, Sora } from "next/font/google";
+import { Geist, Geist_Mono, Russo_One, Sora, League_Spartan } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const leagueSpartan = League_Spartan({
+  variable: "--font-league-spartan",
   subsets: ["latin"],
 });
 

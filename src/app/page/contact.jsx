@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative scroll-smooth py-25 bg-maroon px-4">
+    <section id="contact" className="relative scroll-smooth py-25 bg-skyblue px-4">
       <div className="absolute inset-0 " />
       <motion.div
         variants={slideUp}
@@ -20,7 +20,7 @@ export default function Contact() {
           href="mailto:nura60583@gmail.com"
           style={{
             cursor: "pointer",
-            color: "#EA7B7B",
+            color: "#024670",
             textDecoration: "underline",
             display: "inline-block",
             zIndex: 10,

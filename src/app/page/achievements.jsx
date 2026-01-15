@@ -18,11 +18,11 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="relative scroll-smooth px-4 py-5 mb-20 "
+      className="relative min-h-screen scroll-smooth px-4 py-5 mb-20 "
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="text-center mb-20 text-maroon">
+        <div className="text-center mb-20 text-skyblue">
           <Header title="Achievements" />
         </div>
 
@@ -35,7 +35,7 @@ export default function Achievements() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.25 }}
               viewport={{ once: true }}
-              className="group relative rounded-3xl overflow-hidden bg-maroon/10 cursor-pointer shadow-[0_0_25px_rgba(193,18,31,0.35)]"
+              className="group relative rounded-3xl overflow-hidden bg-skyblue/10 cursor-pointer shadow-[0_0_25px_rgba(48,140,199,0.35)]"
             >
               {/* Image */}
               <div className="relative h-[360px]">
@@ -47,7 +47,7 @@ export default function Achievements() {
                 />
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-maroon/95 via-maroon-teks/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-skyblue/95 via-skyblue-teks/40 to-transparent" />
               </div>
 
               {/* Content */}

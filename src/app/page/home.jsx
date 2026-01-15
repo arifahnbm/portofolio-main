@@ -1,81 +1,86 @@
 "use client";
 
+import { AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedinIn, FaGithub, FaArrowDown } from "react-icons/fa";
 
 export default function Home() {
   
+  const titles = ["SOFTWARE ENGINEER", "UI/UX DESIGNER"];
+  const [activeTitle, setActiveTitle] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTitle((prev) => (prev + 1) % titles.length);
+    }, 3000); // ganti teks tiap 3 detik
+  
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
       id="home"
-      className="relative min-h-[75vh] sm:min-h-screen px-6 sm:px-12 lg:px-24 pt-20 sm:pt-28 lg:pt-32 bg-maroon rounded-b-[3rem] shadow-[0_0_25px_rgba(193,18,31,0.35)] overflow-visible
+      className="relative min-h-screen px-6 sm:px-12 lg:px-24 pt-20 sm:pt-28 lg:pt-32 rounded-b-[3rem] shadow-[0_8px_20px_rgba(48,140,199,0.35)] overflow-hidden
       "
     >
-        {/* ===== MOBILE CONTENT ===== */}
-      <div className="flex flex-col items-center justify-center sm:hidden">
-        {/* Foto Profil */}
-        <motion.div
-          initial={{ scale: 0.7, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="
-            w-40 h-40
-            rounded-full
-            overflow-hidden
-            border-4 border-foreground
-            shadow-xl
-            mb-2
-          "
-        >
-          <Image
-            src="/img/profile.jpg" // ganti sesuai file kamu
-            alt="Profile"
-            width={128}
-            height={128}
-            className="object-cover w-full h-full"
-          />
-        </motion.div>
+      {/* BACKGROUND IMAGE */}
+        <Image
+          src="/img/bg-hero2.jpg"
+          alt="Hero Background"
+          fill
+          priority
+          className="object-cover object-center z-10"
+        />
 
-        {/* Judul */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="hidden sm:block
-            text-center
-            font-heading font-extrabold
-            text-foreground
-            text-[clamp(2.2rem,9vw,3rem)]
-            leading-tight
-          "
-        >
-          Hello! I'm <br />
-          Arifah Nur <br />
-          Basyiroh Machi
-        </motion.h1>
-      </div>
+        {/* GRADIENT OVERLAY */}
+  {/* <div
+    className="
+      absolute inset-0
+      bg-gradient-to-t
+      from-[#008ff4]/90
+      via-[#008ff4]/40
+      to-transparent
+      z-20
+    "
+  /> */}
       
         {/* ================= JUDUL BESAR ================= */}
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className=" relative z-10
+          className=" relative z-30
             text-center
-            font-heading font-extrabold
-            text-foreground
-            text-[clamp(3rem,8vw,7rem)]
-            leading-[0.95]
-            mt-40 sm:mt-16
-          mb-24 sm:mb-32
+            font-league-spartan
+            text-foreground text-bold
+            text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl 
+            leading-[0.95] drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)]
+            mt-[35vh] sm:mt-20 lg:mt-32
+          mb-5
           "
         >
-          Hello! I'm <br />
-          Arifah Nur <br className="sm:hidden" />
-          Basyiroh Machi
+          Hello! I'm Arifah Machi
         </motion.h1>
+
+        <div className="h-[200px] mb-6 overflow-hidden relative z-30 mt-2 sm:mt-0">
+  <AnimatePresence mode="wait">
+    <motion.h2
+      key={titles[activeTitle]}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="text-[clamp(2rem,6vw,6rem)] font-league-spartan text-center drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)] font-extrabold font-heading bg-gradient-to-r from-skyblue-teks to-white bg-clip-text text-transparent"
+    >
+      {titles[activeTitle]}
+    </motion.h2>
+  </AnimatePresence>
+
+</div>
+
+
 
        <motion.a
   href="#about"
@@ -88,15 +93,34 @@ export default function Home() {
   className="
     absolute bottom-10 left-1/2
     -translate-x-1/2
-    z-10
-    bg-black/40
-    p-4
-    rounded-full
-    shadow-xl
+    z-30
+    flex flex-col items-center gap-2
     cursor-pointer
   "
 >
-  <FaArrowDown className="text-foreground text-xl sm:text-2xl" />
+  <span
+    className="
+      text-sm sm:text-base
+      font-medium
+      text-foreground
+      tracking-wide
+    "
+  >
+    Dive into my work
+  </span>
+
+  {/* ARROW (ROUNDED ONLY HERE) */}
+  <div
+    className="
+      bg-black/40
+      p-4
+      rounded-full
+      shadow-xl
+    "
+  >
+    <FaArrowDown className="text-foreground text-xl sm:text-2xl" />
+  </div>
+
 </motion.a>
 
 
