@@ -14,7 +14,15 @@ export default function Contact() {
         viewport={{ once: true }}
         className="text-center mb-20"
       >
-        <Header className="text-foreground" title="Get In Touch" />
+        <motion.h2
+      variants={slideUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="text-4xl md:text-5xl md:mx-[25rem] leading-tight font-extrabold mb-6 bg-gradient-to-r from-seagreen to-white bg-clip-text text-transparent text-center"
+    >
+      Get in Touch
+    </motion.h2>
         <p className=" text-foreground">For business inquiry please send email to</p>
         <a
           href="mailto:nura60583@gmail.com"

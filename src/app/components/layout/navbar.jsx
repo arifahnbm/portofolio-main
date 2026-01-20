@@ -103,13 +103,13 @@ useEffect(() => {
           relative inline-block
     px-5 py-2
     text-sm font-semibold
-    text-[#008ff4]
+    text-skyblue
     transition-colors duration-300
     z-10
 
     after:content-['']
     after:absolute after:inset-0
-    after:bg-[#008ff4]
+    after:bg-skyblue
     after:rounded-full
     after:scale-95
     after:opacity-0
@@ -131,7 +131,7 @@ useEffect(() => {
   href="#contact"
   className="
     relative overflow-hidden rounded-full
-    bg-gradient-to-r from-[#008ff4] to-[#7fc6f9]
+    bg-gradient-to-r from-skyblue-old to-skyblue-teks
     px-7 py-3 font-semibold
     transition-all duration-300 ease-out
     hover:-translate-y-1
@@ -142,7 +142,7 @@ useEffect(() => {
   <span
     className="
       absolute inset-0
-      bg-gradient-to-r from-[#7fc6f9] to-[#008ff4]
+      bg-gradient-to-r from-skyblue-teks to-skyblue-old
       opacity-0
       transition-opacity duration-300
       hover:opacity-100
@@ -159,29 +159,7 @@ useEffect(() => {
   return (
     <>
 
-{/* ===== MOBILE LOGO ===== */}
-{/* <div
-  className="
-    md:hidden
-    fixed top-4 left-4
-    z-50
-    w-15 h-15
-    p-2
-    rounded-full
-    bg-foreground
-    flex items-center justify-center
-    shadow-[0_8px_20px_rgba(48,140,199,0.35)]
-    border border-[#46b2ff]/30
-  "
->
-  <Image
-    src="/img/logo.png"
-    alt="Logo"
-    width={28}
-    height={28}
-    className="object-contain"
-  />
-</div> */}
+
 
 
       {/* HERO NAVBAR */}
@@ -209,7 +187,7 @@ useEffect(() => {
             transition={{ type: "spring", stiffness: 90, damping: 20 }}
             className="hidden md:block
               fixed top-6 left-1/2 -translate-x-1/2 w-[90%] rounded-full z-50
-              bg-foreground shadow-[0_8px_20px_rgba(48,140,199,0.35)] border border-[#46b2ff]
+              bg-foreground shadow-[0_8px_20px_rgba(48,140,199,0.35)] border border-skyblue
               
             "
           >
@@ -228,7 +206,7 @@ useEffect(() => {
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="
         fixed top-[72px] left-0 w-full z-40
-        bg-[#46b2ff]/95 backdrop-blur-xl
+        bg-skyblue/95 backdrop-blur-xl
         md:hidden overflow-hidden 
       "
           >
@@ -249,7 +227,7 @@ useEffect(() => {
   href="#contact"
   className="
     relative overflow-hidden rounded-full
-    bg-gradient-to-r from-[#46b2ff] to-[#7fc6f9]
+    bg-gradient-to-r from-skyblue-old to-skyblue-teks
     px-7 py-3 font-semibold
     transition-all duration-300 ease-out
     hover:-translate-y-1
@@ -260,7 +238,7 @@ useEffect(() => {
   <span
     className="
       absolute inset-0
-      bg-gradient-to-r from-[#7fc6f9] to-[#46b2ff]
+      bg-gradient-to-r from-skyblue-teks to-skyblue-old
       opacity-0
       transition-opacity duration-300
       hover:opacity-100
@@ -274,92 +252,44 @@ useEffect(() => {
         )}
       </AnimatePresence>
 
-{/* ===== MOBILE SIDE NAV ===== */}
-{/* <motion.nav
-  initial={{ x: -60, opacity: 0 }}
-  animate={{ x: 0, opacity: 1 }}
-  transition={{ duration: 0.4, ease: "easeOut" }}
-  className="
-    md:hidden
-    fixed left-4 top-25 
-    z-50
-    flex flex-col gap-4
-    bg-foreground
-    rounded-full
-    px-2 py-3
-    shadow-[0_8px_20px_rgba(48,140,199,0.35)]
-    border border-[#46b2ff]/30
-  "
->
-  {navIcons.map((item) => (
-    <a
-  key={item.label}
-  href={item.href}
-  className="relative group w-10 h-10 flex items-center justify-center"
-> */}
-  {/* ACTIVE BACKGROUND */}
-  {/* {activeSection === item.href.replace("#", "") && (
-    <motion.span
-      layoutId="activeIcon"
-      className="absolute inset-0 rounded-full bg-[#46b2ff] text-white"
-      transition={{ type: "spring", stiffness: 500, damping: 30 }}
-    />
-  )} */}
 
-  {/* ICON */}
-  {/* <span
-  className={`relative z-10 transition-colors duration-300 ${
-    activeSection === item.href.replace("#", "")
-      ? "text-white"
-      : "text-[#46b2ff] group-hover:text-white"
-  }`}
->
-  <item.icon size={16} />
-</span>
-
-</a>
-
-  ))}
-</motion.nav> */}
 
  {/* ===== MOBILE TOP BAR ===== */}
 {/* ===== MOBILE TOP BAR ===== */}
-<div className="md:hidden fixed top-4 left-4 right-4 z-50 flex justify-between items-center">
-  {/* LOGO */}
+<div className="md:hidden fixed top-4 left-4 right-4 z-50 flex justify-center">
   <div
     className="
-      w-16 h-16
+      flex items-center justify-between
+      w-[98%]
+      px-4 py-2
       rounded-full
       bg-foreground
-      flex items-center justify-center
-      shadow-[0_10px_30px_rgba(48,140,199,0.4)]
-      border border-[#46b2ff]/30
+      shadow-[0_12px_40px_rgba(48,140,199,0.45)]
+      border border-skyblue/30
     "
   >
-    <Image
-      src="/img/logo.png"
-      alt="Logo"
-      width={36}
-      height={36}
-      className="object-contain"
-    />
-  </div>
+    {/* LOGO (LEFT) */}
+    <div className="w-10 h-10 flex items-center justify-center">
+      <Image
+        src="/img/logo.png"
+        alt="Logo"
+        width={32}
+        height={32}
+        className="object-contain"
+      />
+    </div>
 
-  {/* BURGER */}
-  <button
-    onClick={() => setMobileOpen(!mobileOpen)}
-    className="
-      w-15 h-15
-      rounded-full
-      bg-foreground text-[#008ff4]
-      flex items-center justify-center
-      shadow-[0_10px_30px_rgba(48,140,199,0.4)]
-      border border-[#46b2ff]/30
-    "
-  >
-    {mobileOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
-  </button>
+    {/* BURGER (RIGHT) */}
+    <button
+      onClick={() => setMobileOpen(!mobileOpen)}
+      className="w-10 h-10 flex items-center justify-center text-skyblue"
+    >
+      {mobileOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+    </button>
+  </div>
 </div>
+
+
 
 <AnimatePresence>
   {mobileOpen && (
@@ -377,7 +307,7 @@ useEffect(() => {
         rounded-full
         px-2 py-4
         shadow-[0_12px_40px_rgba(48,140,199,0.45)]
-        border border-[#46b2ff]/30
+        border border-skyblue/30
       "
     >
       {navIcons.map((item) => (
@@ -390,7 +320,7 @@ useEffect(() => {
           {activeSection === item.href.replace("#", "") && (
             <motion.span
               layoutId="activeIcon"
-              className="absolute inset-0 rounded-full bg-[#46b2ff]"
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-skyblue to-seagreen"
               transition={{ type: "spring", stiffness: 500, damping: 30 }}
             />
           )}
@@ -400,7 +330,7 @@ useEffect(() => {
             className={`relative z-10 transition-colors duration-300 ${
               activeSection === item.href.replace("#", "")
                 ? "text-white"
-                : "text-[#46b2ff] group-hover:text-white"
+                : "text-skyblue group-hover:text-white"
             }`}
           >
             <item.icon size={18} />
@@ -413,7 +343,7 @@ useEffect(() => {
               absolute right-16
               whitespace-nowrap
               text-sm font-semibold
-              text-[#46b2ff]
+              text-skyblue
               opacity-0 translate-x-2
               group-hover:opacity-100
               group-hover:translate-x-0
@@ -427,9 +357,6 @@ useEffect(() => {
     </motion.nav>
   )}
 </AnimatePresence>
-
-
-
 
 
     </>

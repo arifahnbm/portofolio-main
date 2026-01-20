@@ -37,7 +37,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative  px-4 md:px-24 py-16 md:py-32"
+      className="relative  px-4 md:px-24 py-16 md:py-32 bg-[radial-gradient(circle_at_top_right,#80D8C3,transparent_40%),radial-gradient(circle_at_bottom_left,#7FC6F9,transparent_40%)]"
     >
 
         

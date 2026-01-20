@@ -25,7 +25,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen px-6 sm:px-12 lg:px-24 pt-20 "
+      className="relative min-h-screen px-6 sm:px-12 lg:px-24 pt-20 bg-[radial-gradient(circle_at_bottom_right,#80D8C3,transparent_40%)] "
     >
 
       <div className="text-center mb-20 text-skyblue">

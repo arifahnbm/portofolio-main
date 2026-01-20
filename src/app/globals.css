@@ -2,18 +2,20 @@
 
 :root {
   --background: #E9F6FF;
-  --foreground: #ffffff;
+  --foreground: #f5f5f5;
 
-  --skyblue: #46b2ff;
-  --skyblue-teks: #7fc6f9;
-  --skyblue-old: #008ff4;
+  --skyblue: #4DA8DA;
+  --skyblue-teks: #aedaf2;
+  --skyblue-old: #0273b0;
+
+  --seagreen: #80D8C3;
 
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Sora", sans-serif;
 
   --gradient-skyblue: linear-gradient(
     to right,
-    var(--skyblue),
+    var(--skyblue-teks),
     var(--skyblue-old)
   );
 }
@@ -26,6 +28,8 @@
 
   --color-skyblue: var(--skyblue);
   --color-skyblue-teks: var(--skyblue-teks);
+  --color-skyblue-old: var(--skyblue-old);
+  --color-seagreen: var(--seagreen);
 
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
