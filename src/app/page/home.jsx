@@ -94,7 +94,7 @@ export default function Home() {
     transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
     className="w-full lg:w-1/2
   flex justify-center lg:justify-end
-  mb-4 lg:mb-0 mt-40 lg:mt-20"
+  mb-4 lg:mb-0 mt-20 lg:mt-20"
   >
     <Image
       src="/img/whale.png" // ganti sesuai gambarmu
