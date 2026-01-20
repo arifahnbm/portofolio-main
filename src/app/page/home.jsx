@@ -24,7 +24,7 @@ export default function Home() {
   id="home"
   className="
     relative
-    min-h-[85svh] sm:min-h-screen
+    min-h-[90svh] sm:min-h-screen
     px-6 sm:px-12 lg:px-24
     pt-24 sm:pt-28 lg:pt-32
     bg-gradient-to-r from-skyblue via-seagreen to-white
