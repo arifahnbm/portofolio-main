@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "./components/layout/navbar";
+import ThemeToggle from "./components/layout/themeToggle";
 import About from "./page/about";
 import Projects from "./page/projects";
 import Home from "./page/home";
@@ -13,6 +14,8 @@ export default function Page() {
       {/* BACKGROUND GRADIENT */}
       {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#3b1b6d,transparent_40%)]" /> */}
       <Navbar />
+      <ThemeToggle />
+
       <Home />
       <About />
       <Projects />

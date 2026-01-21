@@ -18,7 +18,7 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="relative min-h-screen scroll-smooth px-4 py-5 mb-20 bg-[radial-gradient(circle_at_top_left,#7FC6F9,transparent_40%)] "
+      className="relative min-h-screen scroll-smooth px-4 py-5 mb-20 bg-[radial-gradient(circle_at_top_left,#7FC6F9,transparent_40%)] dark:bg-none"
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}

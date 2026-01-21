@@ -86,11 +86,19 @@ useEffect(() => {
   const NavbarContent = (
     <>
       <Image
-        src="/img/logo1.png"
+        src="/img/logo-light.png"
         alt="Logo"
         width={100}
         height={40}
-        className="object-contain"
+        className="object-contain dark:hidden"
+      />
+
+      <Image
+        src="/img/logo-dark.png"
+        alt="Logo"
+        width={100}
+        height={40}
+        className="object-contain hidden dark:block"
       />
 
       <div className="hidden md:flex items-center">
@@ -101,24 +109,30 @@ useEffect(() => {
                 href={item.href}
                 className="
           relative inline-block
-    px-5 py-2
-    text-sm font-semibold
-    text-skyblue
-    transition-colors duration-300
-    z-10
+  px-5 py-2
+  text-sm font-semibold
+  text-skyblue
+  transition-all duration-300
+  z-10
 
-    after:content-['']
-    after:absolute after:inset-0
-    after:bg-skyblue
-    after:rounded-full
-    after:scale-95
-    after:opacity-0
-    after:transition-all after:duration-300
-    after:-z-10
+  after:content-['']
+  after:absolute
+  after:left-0
+  after:-bottom-2
+  after:w-full
+  after:h-[2px]
+  after:bg-transparent
+  after:scale-x-0
+  after:origin-left
+  after:transition-transform after:duration-300
 
-    hover:text-white
-    hover:after:scale-100
-    hover:after:opacity-100
+  hover:text-white
+
+  dark:text-indigo-100
+  dark:hover:text-seagreen
+  dark:hover:drop-shadow-[0_0_8px_rgba(128,216,195,0.8)]
+  dark:after:bg-seagreen
+  dark:hover:after:scale-x-100
   "
               >
                 {item.label}
@@ -137,6 +151,11 @@ useEffect(() => {
     hover:-translate-y-1
     hover:shadow-[0_4px_15px_rgba(48,140,199,0.4)]
     hover:text-white
+
+    dark:text-white
+    dark:hover:shadow-[0_4px_15px_rgba(128,216,195,0.6)]
+    dark:hover:text-white
+    dark:hover:from-seagreen dark:hover:to-foreground
   "
 >
   <span
@@ -168,7 +187,22 @@ useEffect(() => {
           <motion.nav
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-6 left-1/2 -translate-x-1/2 w-[90%] z-40 rounded-full shadow-[0_8px_20px_rgba(48,140,199,0.35)] bg-foreground"
+            className="top-6 left-1/2 -translate-x-1/2 w-[90%] z-40
+  rounded-full
+  bg-foreground
+  shadow-[0_8px_20px_rgba(48,140,199,0.35)]
+  absolute
+
+  dark:top-0
+  dark:left-0
+  dark:w-full
+  dark:translate-x-0
+  dark:rounded-none
+  dark:bg-foreground/30
+  dark:shadow-none
+  dark:border-b
+  dark:border-foreground
+  dark:fixed"
           >
             <div className="hidden md:flex items-center justify-between px-6 md:px-24 py-6 ">
               {NavbarContent}
@@ -186,8 +220,19 @@ useEffect(() => {
             exit={{ y: -90, opacity: 0 }}
             transition={{ type: "spring", stiffness: 90, damping: 20 }}
             className="hidden md:block
-              fixed top-6 left-1/2 -translate-x-1/2 w-[90%] rounded-full z-50
-              bg-foreground shadow-[0_8px_20px_rgba(48,140,199,0.35)] border border-skyblue
+  fixed top-6 left-1/2 -translate-x-1/2 w-[90%]
+  rounded-full z-50
+  bg-foreground
+  shadow-[0_8px_20px_rgba(48,140,199,0.35)]
+  border border-skyblue
+
+  dark:top-0 dark:left-0 dark:translate-x-0
+  dark:w-full
+  dark:rounded-none
+  dark:bg-foreground
+  dark:shadow-none
+  dark:border-x-0 dark:border-t-0
+  dark:border-b dark:border-foreground
               
             "
           >
@@ -256,16 +301,26 @@ useEffect(() => {
 
  {/* ===== MOBILE TOP BAR ===== */}
 {/* ===== MOBILE TOP BAR ===== */}
-<div className="md:hidden fixed top-4 left-4 right-4 z-50 flex justify-center">
+<div className="md:hidden fixed top-4 left-4 right-4 dark:top-0 dark:left-0 dark:right-0 z-50 flex justify-center">
   <div
     className="
       flex items-center justify-between
-      w-[98%]
-      px-4 py-2
-      rounded-full
-      bg-foreground
-      shadow-[0_12px_40px_rgba(48,140,199,0.45)]
-      border border-skyblue/30
+  w-[98%]
+  px-4 py-2
+  rounded-full
+  bg-foreground
+  shadow-[0_12px_40px_rgba(48,140,199,0.45)]
+  border border-skyblue/30
+
+  dark:rounded-none
+  dark:w-full
+  dark:bg-foreground/30
+  dark:top-0
+  dark:shadow-none
+  dark:border-x-0
+  dark:border-t-0
+  dark:border-b
+  dark:border-foreground
     "
   >
     {/* LOGO (LEFT) */}
@@ -308,6 +363,7 @@ useEffect(() => {
         px-2 py-4
         shadow-[0_12px_40px_rgba(48,140,199,0.45)]
         border border-skyblue/30
+        dark:shadow-[0_0_12px_rgba(128,216,195,0.8)]
       "
     >
       {navIcons.map((item) => (
@@ -320,7 +376,13 @@ useEffect(() => {
           {activeSection === item.href.replace("#", "") && (
             <motion.span
               layoutId="activeIcon"
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-skyblue to-seagreen"
+              className="absolute inset-0
+  rounded-full
+  bg-gradient-to-r from-skyblue to-seagreen
+
+  dark:rounded-full
+  dark:bg-seagreen
+  dark:shadow-[0_0_12px_rgba(128,216,195,0.8)]"
               transition={{ type: "spring", stiffness: 500, damping: 30 }}
             />
           )}

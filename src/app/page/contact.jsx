@@ -19,7 +19,7 @@ export default function Contact() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="text-4xl md:text-5xl md:mx-[25rem] leading-tight font-extrabold mb-6 bg-gradient-to-r from-seagreen to-white bg-clip-text text-transparent text-center"
+      className="text-4xl md:text-5xl md:mx-[25rem] leading-tight font-extrabold mb-6 bg-gradient-to-r from-seagreen to-white bg-clip-text text-transparent text-center dark:from-indigo-300 dark:to-white"
     >
       Get in Touch
     </motion.h2>

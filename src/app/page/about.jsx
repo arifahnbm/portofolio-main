@@ -25,7 +25,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen px-6 sm:px-12 lg:px-24 pt-20 bg-[radial-gradient(circle_at_bottom_right,#80D8C3,transparent_40%)] "
+      className="relative min-h-screen px-6 sm:px-12 lg:px-24 pt-20 bg-[radial-gradient(circle_at_bottom_right,#80D8C3,transparent_40%)] dark:bg-none "
     >
 
       <div className="text-center mb-20 text-skyblue">
@@ -80,7 +80,7 @@ export default function About() {
 
           <motion.p
             variants={itemUp}
-            className="text-sm leading-relaxed text-gray-700 mb-8"
+            className="text-sm leading-relaxed text-gray-700 dark:text-white mb-8"
           >
             Hi! I'm Arifah Nur Basyiroh Machi, a student at Banyuwangi State Polytechnic, majoring in Business and Informatics, specializing in UI/UX design, Laravel, and Flutter. Familiar with project-based learning, I'm learning how to develop web and mobile applications. I'm continuously developing my technical and teamwork skills to become a responsive, solution-oriented developer, ready to face the challenges of the digital era.
           </motion.p>

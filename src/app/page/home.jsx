@@ -27,11 +27,15 @@ export default function Home() {
     min-h-[90svh] sm:min-h-screen
     px-6 sm:px-12 lg:px-24
     pt-24 sm:pt-28 lg:pt-32
-    bg-gradient-to-r from-skyblue via-seagreen to-white
+    bg-gradient-to-r from-skyblue via-seagreen to-foreground
     backdrop-blur
     rounded-b-[3rem]
     shadow-[0_8px_20px_rgba(48,140,199,0.35)]
     overflow-hidden
+
+  
+    dark:shadow-[0_8px_30px_rgba(153,54,239,0.45)]
+    dark:bg-[radial-gradient(circle_at_bottom_left,#9936ef_10%,transparent_70%)]
   "
 >
 
@@ -59,7 +63,7 @@ export default function Home() {
         text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl
         leading-[1]
         drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)]
-        mb-4
+        mb-4 dark:text-white dark:drop-shadow-[0_6px_18px_rgba(0,0,0,0.6)] 
       "
     >
       Hello! I'm Arifah Machi
@@ -78,7 +82,7 @@ export default function Home() {
             font-heading font-extrabold
             drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]
             bg-gradient-to-r from-seagreen to-white
-            bg-clip-text text-transparent
+            bg-clip-text text-transparent dark:from-indigo-300 dark:to-white
           "
         >
           {titles[activeTitle]}
@@ -103,9 +107,22 @@ export default function Home() {
       height={420}
       className="
         object-contain
-        drop-shadow-[0_20px_60px_rgba(48,140,199,0.45)]
+        drop-shadow-[0_20px_60px_rgba(48,140,199,0.45)] dark:hidden
       "
     />
+
+    <Image
+      src="/img/space.png" // ganti sesuai gambarmu
+      alt="Hero Illustration"
+      width={420}
+      height={420}
+      className="
+        object-contain
+        drop-shadow-[0_20px_60px_rgba(48,140,199,0.45)] hidden dark:block
+      "
+    />
+
+
   </motion.div>
 </div>
 
@@ -133,10 +150,21 @@ export default function Home() {
       text-sm sm:text-base
       font-medium
       text-foreground
-      tracking-wide
+      tracking-wide dark:hidden
     "
   >
     Dive into my work
+  </span>
+
+  <span
+    className="
+      text-sm sm:text-base
+      font-medium
+      text-white
+      tracking-wide hidden dark:block
+    "
+  >
+    Explore My Digital Cosmos
   </span>
 
   {/* ARROW (ROUNDED ONLY HERE) */}
@@ -148,7 +176,7 @@ export default function Home() {
       shadow-xl
     "
   >
-    <FaArrowDown className="text-foreground text-xl sm:text-2xl" />
+    <FaArrowDown className="text-foreground dark:text-white text-xl sm:text-2xl" />
   </div>
 
 </motion.a>

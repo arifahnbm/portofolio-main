@@ -35,9 +35,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={`${sora.variable} ${russoOne.variable} antialiased`}>
-        {children}
+        <div className="fixed inset-0 z-0 bg-background transition-colors duration-500" />
+
+        {/* STAR LAYER */}
+        <div className="star-bg fixed inset-0 z-[1] pointer-events-none" />
+
+        {/* CONTENT */}
+        <main className="relative z-10">
+          {children}
+        </main>
       </body>
     </html>
   );
