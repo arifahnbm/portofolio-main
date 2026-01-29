@@ -24,9 +24,14 @@ export default function About() {
 
   return (
     <section
-      id="about"
-      className="relative min-h-screen px-6 sm:px-12 lg:px-24 pt-20 bg-[radial-gradient(circle_at_bottom_right,#80D8C3,transparent_40%)] dark:bg-none "
-    >
+  id="about"
+  className="relative min-h-screen px-6 sm:px-12 lg:px-24 pt-20"
+>
+    {/* LIGHT RADIAL BACKGROUND */}
+    <div className="absolute inset-0 bg-about-light dark:hidden z-0" />
+
+    {/* CONTENT */}
+    <div className="relative z-10">
 
       <div className="text-center mb-20 text-skyblue">
                 <Header title="About Me" />
@@ -91,7 +96,7 @@ export default function About() {
             className="flex items-center gap-6"
           >
             <a
-              href="https://drive.google.com/"
+              href="https://drive.google.com/file/d/1ljsGqoXL6wQFnlIs1noVqJbkT8lgYJei/view?usp=sharing"
               target="_blank"
               className="
                 rounded-full border-2 border-skyblue
@@ -101,7 +106,7 @@ export default function About() {
                 hover:bg-skyblue hover:text-white
               "
             >
-              View CV
+              View Arifah's CV
             </a>
 
             <div className="flex gap-4">
@@ -155,6 +160,7 @@ export default function About() {
 </motion.div>
 
       </div>
+    </div>
     </section>
   );
 }

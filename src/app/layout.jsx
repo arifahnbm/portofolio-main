@@ -37,10 +37,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body className={`${sora.variable} ${russoOne.variable} antialiased`}>
-        <div className="fixed inset-0 z-0 bg-background transition-colors duration-500" />
+        <div className="fixed inset-0 -z-10 bg-foreground transition-colors duration-500" />
 
         {/* STAR LAYER */}
-        <div className="star-bg fixed inset-0 z-[1] pointer-events-none" />
+        <div className="star-bg fixed inset-0 -z-5 pointer-events-none" />
 
         {/* CONTENT */}
         <main className="relative z-10">
