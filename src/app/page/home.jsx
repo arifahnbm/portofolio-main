@@ -24,8 +24,8 @@ export default function Home() {
   id="home"
   className="
     relative
-    min-h-[90svh] sm:min-h-screen
-    px-6 sm:px-12 lg:px-24
+    min-h-[90svh] sm:min-h-screen md:min-h-[95vh] xl:min-h-screen
+    px-6 sm:px-10 md:px-14 xl:px-24
     pt-24 sm:pt-28 lg:pt-32
     bg-gradient-to-r from-skyblue via-seagreen to-foreground
     backdrop-blur
@@ -44,7 +44,7 @@ export default function Home() {
   className="
     relative z-30
     max-w-7xl mx-auto
-    flex flex-col-reverse lg:flex-row
+    flex flex-col-reverse xl:flex-row
     items-center justify-center
     gap-8 lg:gap-10
     h-full
@@ -78,7 +78,7 @@ export default function Home() {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="
-            text-[clamp(1.8rem,4vw,3.5rem)]
+            text-[clamp(1.8rem,4vw,3.6rem)] lg:text-[3.8rem] md:leading-tight
             font-heading font-extrabold
             drop-shadow-[0_8px_24px_rgba(0,0,0,0.3)]
             bg-gradient-to-r from-seagreen to-white
@@ -98,14 +98,17 @@ export default function Home() {
     transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
     className="w-full lg:w-1/2
   flex justify-center lg:justify-end
-  mb-0 lg:mb-0 mt-20 lg:mt-20"
+  mb-0 lg:mb-0 mt-12 md:mt-14 xl:mt-20"
   >
     <Image
       src="/img/whale.png" // ganti sesuai gambarmu
       alt="Hero Illustration"
       width={420}
       height={420}
-      className="
+      className=" w-[260px]
+  sm:w-[320px]
+  md:w-[360px]
+  xl:w-[420px]
         object-contain
         drop-shadow-[0_20px_60px_rgba(48,140,199,0.45)] dark:hidden
       "
@@ -116,7 +119,10 @@ export default function Home() {
       alt="Hero Illustration"
       width={420}
       height={420}
-      className="
+      className=" w-[260px]
+  sm:w-[320px]
+  md:w-[360px]
+  xl:w-[420px]
         object-contain
         drop-shadow-[0_20px_60px_rgba(48,140,199,0.45)] hidden dark:block
       "

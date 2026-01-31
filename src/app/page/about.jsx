@@ -38,11 +38,11 @@ export default function About() {
               </div>
       
       {/* ================= KONTEN BAWAH ================= */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 rounded-3xl
-    border border-skyblue/40 p-8 backdrop-blur-sm items-center">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 md:gap-14 xl:gap-20 rounded-3xl
+    border border-skyblue/40 p-6 md:p-10 xl:p-12 backdrop-blur-sm items-center">
         {/* ===== LEFT TEXT ===== */}
         <motion.div
-          className="max-w-xl"
+          className="max-w-xl mx-auto text-center xl:text-left"
           initial="hidden"
           animate="show"
           variants={{
@@ -61,11 +61,11 @@ export default function About() {
   initial={{ opacity: 0, scale: 0.9 }}
   animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.6, ease: "easeOut" }}
-  className="flex justify-center mb-6 lg:hidden"
+  className="flex justify-center mb-6 xl:hidden"
 >
   <div
     className="
-      w-40 h-40
+      w-40 h-40 md:w-52 md:h-52 lg:w-60 lg:h-60
       rounded-full
       overflow-hidden
       border border-skyblue
@@ -93,7 +93,7 @@ export default function About() {
           {/* BUTTON + SOCIAL */}
           <motion.div
             variants={itemUp}
-            className="flex items-center gap-6"
+            className="flex flex-col sm:flex-row justify-center xl:justify-start items-center gap-6"
           >
             <a
               href="https://drive.google.com/file/d/1ljsGqoXL6wQFnlIs1noVqJbkT8lgYJei/view?usp=sharing"
@@ -137,7 +137,7 @@ export default function About() {
   initial={{ opacity: 0, y: 40, scale: 0.95 }}
   animate={{ opacity: 1, y: 0, scale: 1 }}
   transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-  className="hidden lg:flex justify-center"
+  className="hidden xl:flex justify-center"
 >
   <div
     className="

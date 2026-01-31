@@ -18,7 +18,7 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="relative min-h-screen scroll-smooth px-4 py-5 mb-20 bg-[radial-gradient(circle_at_top_left,#7FC6F9,transparent_40%)] dark:bg-none"
+      className="relative min-h-screen scroll-smooth px-4 sm:px-10 md:px-14 xl:px-24 py-12 md:py-20 xl:py-28 mb-20 bg-[radial-gradient(circle_at_top_left,#7FC6F9,transparent_40%)] dark:bg-none"
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
@@ -27,7 +27,7 @@ export default function Achievements() {
         </div>
 
         {/* Blog Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
           {blogs.map((blog, i) => (
             <motion.article
               key={blog.id}
@@ -38,7 +38,7 @@ export default function Achievements() {
               className="group relative rounded-3xl overflow-hidden bg-skyblue/10 cursor-pointer shadow-[0_0_25px_rgba(48,140,199,0.35)]"
             >
               {/* Image */}
-              <div className="relative h-[360px]">
+              <div className="relative h-[240px] sm:h-[300px] lg:h-[340px] xl:h-[360px]">
                 <Image
                   src={blog.image}
                   alt={blog.title}
@@ -51,7 +51,7 @@ export default function Achievements() {
               </div>
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 lg:p-7">
                 <div className="flex items-center gap-4 text-xs text-white/70 mb-3">
                   <span className="flex items-center gap-1">
                     <Calendar size={14} />
@@ -59,7 +59,7 @@ export default function Achievements() {
                   </span>
                 </div>
 
-                <h3 className="text-lg font-semibold text-white leading-snug transition-colors duration-300 ">
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-white leading-snug transition-colors duration-300 ">
                   {blog.title}
                 </h3>
               </div>

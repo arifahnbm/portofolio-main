@@ -37,7 +37,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative  px-4 md:px-24 py-16 md:py-32 bg-[radial-gradient(circle_at_top_right,#80D8C3,transparent_40%),radial-gradient(circle_at_bottom_left,#7FC6F9,transparent_40%)] dark:bg-none"
+      className="relative px-4 sm:px-10 md:px-14 xl:px-24 py-16 md:py-24 xl:py-32 bg-[radial-gradient(circle_at_top_right,#80D8C3,transparent_40%),radial-gradient(circle_at_bottom_left,#7FC6F9,transparent_40%)] dark:bg-none"
     >
 
         
@@ -93,7 +93,7 @@ export default function Projects() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10"
+        className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8 xl:gap-10"
       >
         {filteredProjects.map((project, i) => (
           <div
@@ -113,7 +113,7 @@ export default function Projects() {
                 src={project.image}
                 alt={project.title}
                 className="
-          w-full h-[200px] md:h-[360px] object-cover
+          w-full h-[200px] sm:h-[260px] lg:h-[320px] xl:h-[360px] object-cover
           transition-transform duration-700
           group-hover:scale-105
         "
@@ -121,14 +121,14 @@ export default function Projects() {
             </div>
 
             {/* CONTENT */}
-            <div className="p-8">
+            <div className="p-6 md:p-7 xl:p-8">
               {/* Title */}
               <h3 className=" text-xl md:text-2xl text-skyblue font-bold mb-3">
                 {project.title}
               </h3>
 
               {/* Description */}
-              <p className=" text-xs md:text-sm text-skyblue/70 leading-relaxed mb-6 line-clamp-2">
+              <p className="text-xs md:text-sm text-skyblue/70 leading-relaxed mb-6 line-clamp-3 lg:line-clamp-2">
                 {project.description}
               </p>
 
@@ -155,7 +155,7 @@ export default function Projects() {
               <a
                 href={project.link}
                 className="
-          inline-flex items-center gap-2
+          inline-flex flex-wrap justify-center items-center gap-2
           rounded-full border border-skyblue/30
           px-6 py-2 text-sm font-medium
           text-skyblue

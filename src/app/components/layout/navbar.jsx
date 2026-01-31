@@ -204,7 +204,7 @@ useEffect(() => {
   dark:border-foreground
   dark:fixed"
           >
-            <div className="hidden md:flex items-center justify-between px-6 md:px-24 py-6 ">
+            <div className="hidden lg:flex items-center justify-between px-6 md:px-24 py-6 ">
               {NavbarContent}
             </div>
           </motion.nav>
@@ -219,7 +219,7 @@ useEffect(() => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -90, opacity: 0 }}
             transition={{ type: "spring", stiffness: 90, damping: 20 }}
-            className="hidden md:block
+            className="hidden lg:block
   fixed top-6 left-1/2 -translate-x-1/2 w-[90%]
   rounded-full z-50
   bg-foreground
@@ -236,7 +236,7 @@ useEffect(() => {
               
             "
           >
-            <div className="hidden md:flex items-center justify-between px-10 md:px-24 py-4">
+            <div className="hidden lg:flex items-center justify-between px-10 md:px-24 py-4">
               {NavbarContent}
             </div>
           </motion.nav>
@@ -301,7 +301,7 @@ useEffect(() => {
 
  {/* ===== MOBILE TOP BAR ===== */}
 {/* ===== MOBILE TOP BAR ===== */}
-<div className="md:hidden fixed top-4 left-4 right-4 dark:top-0 dark:left-0 dark:right-0 z-50 flex justify-center">
+<div className="lg:hidden fixed top-4 left-4 right-4 dark:top-0 dark:left-0 dark:right-0 z-50 flex justify-center">
   <div
     className="
       flex items-center justify-between
@@ -354,7 +354,7 @@ useEffect(() => {
       exit={{ y: -40, opacity: 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 18 }}
       className="
-        md:hidden
+        lg:hidden
         fixed right-4 top-28
         z-40
         flex flex-col gap-4
